@@ -1,8 +1,7 @@
-package custom_explicit_wait;
+package context;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
@@ -14,6 +13,6 @@ private final AppiumDriver<MobileElement> appiumDriver;
 
     @Override
     public Boolean apply( WebDriver webDriver) {
-        return appiumDriver.getContextHandles().size() > 10;
+        return appiumDriver.getContextHandles().size() > 1;
     }
 }
