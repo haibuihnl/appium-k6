@@ -1,4 +1,4 @@
-package Lession17;
+package test.Lession17;
 
 import driver.DriverFactory;
 import driver.Platforms;
@@ -16,7 +16,7 @@ public class TakeScreenShot {
 
         //Add one more dependency:
         try {
-            MobileElement login = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
+            MobileElement login = appiumDriver.findElement(MobileBy.AccessibilityId("test/Login"));
             login.click();
             // Whole screen
             File base64ScreenShotData = appiumDriver.getScreenshotAs(OutputType.FILE);

@@ -1,11 +1,10 @@
-package Login;
+package test.Login;
 
 import driver.DriverFactory;
 import driver.Platforms;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +17,7 @@ public class FormInteraction {
         try {
 
             // Fill and click on nav login button
-            MobileElement loginButtonNav = driver.findElement(MobileBy.AccessibilityId("Login"));
+            MobileElement loginButtonNav = driver.findElement(MobileBy.AccessibilityId("test/Login"));
             loginButtonNav.click();
 
             // Fill the form

@@ -1,4 +1,4 @@
-package Login;
+package test.Login;
 
 import driver.DriverFactory;
 import driver.Platforms;
@@ -15,7 +15,7 @@ public class XPATHLearning {
         AppiumDriver<MobileElement> driver = DriverFactory.getDriver(Platforms.android);
 
         try {
-            MobileElement loginButtonNav = driver.findElement(MobileBy.AccessibilityId("Login"));
+            MobileElement loginButtonNav = driver.findElement(MobileBy.AccessibilityId("test/Login"));
             loginButtonNav.click();
 
             //Find all matching elements

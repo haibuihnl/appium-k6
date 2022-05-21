@@ -1,4 +1,4 @@
-package LauchApp;
+package test.LauchApp;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
