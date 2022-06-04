@@ -8,13 +8,13 @@ public class TestGSON {
     public static void main(String[] args) {
 
         // Convert from Object to JSON
-        LoginCredData loginCredData = new LoginCredData("Teo", "teo@sth.com");
+        LoginCredData loginCredData = new LoginCredData("Hai", "hai@sth.com");
 
         Gson gson = new Gson();
         System.out.println(gson.toJson(loginCredData));
 
         // Convert from JSON to Object
-        String loginCredJSONData = "{\"email\":\"Teo\",\"password\":\"teo@sth.com\"}";
+        String loginCredJSONData = "{\"email\":\"Hai\",\"password\":\"hai@sth.com\"}";
         LoginCredData convertedFromJson = gson.fromJson(loginCredJSONData, LoginCredData.class);
         System.out.println(convertedFromJson);
     }
