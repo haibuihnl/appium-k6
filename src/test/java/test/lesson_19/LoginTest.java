@@ -16,9 +16,9 @@ public class LoginTest {
     public void testLogin() {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platforms.android);
         Map<String, String> credData = new HashMap<>();
-        credData.put("teo@", "12345678");
-        credData.put("teo@sth.xyz", "1234567");
-        credData.put("teo@sth.com", "12345678");
+        credData.put("hai@", "12345678");
+        credData.put("hai@sth.xyz", "1234567");
+        credData.put("hai@sth.com", "12345678");
 
         try {
             for (String email : credData.keySet()) {

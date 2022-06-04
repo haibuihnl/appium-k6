@@ -1,9 +1,8 @@
-package test.lession18;
+package test.lesson_18;
 
 import driver.DriverFactory;
 import driver.Platforms;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import models.pages.LoginScreen;
 
@@ -18,7 +17,7 @@ public class LoginScreenPOM_01 {
             loginScreen.bottomNavComponent().clickOnLoginIcon();
 
             // Fill the form
-            loginScreen.loginFormComponent().inputUsername("teo@sth.com");
+            loginScreen.loginFormComponent().inputUsername("hai@sth.com");
             loginScreen.loginFormComponent().inputPassword("12345678");
             loginScreen.loginFormComponent().clickOnLoginBtn();
 

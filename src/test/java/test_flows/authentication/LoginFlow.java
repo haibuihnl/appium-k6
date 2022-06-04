@@ -24,9 +24,9 @@ public class LoginFlow extends BaseFlow {
         LoginScreen loginScreen = new LoginScreen(appiumDriver);
         LoginFormComponent loginFormComp = loginScreen.loginFormComponent();
         if(!emailStr.isEmpty()){
-            MobileElement emailElem = loginFormComp.emailElem();
-            emailElem.clear();
-            emailElem.sendKeys(emailStr);
+            MobileElement emailElement = loginFormComp.emailElem();
+            emailElement.clear();
+            emailElement.sendKeys(emailStr);
         }
 
         if(!passwordStr.isEmpty()){
@@ -63,7 +63,7 @@ public class LoginFlow extends BaseFlow {
     }
 
     private void verifyCorrectLoginCreds() {
-        // TODO: Homework
+        System.out.println("You login correct Email and Password");
     }
 
     private void verifyIncorrectEmailStr(LoginFormComponent loginFormComp) {
