@@ -5,6 +5,7 @@ import io.appium.java_client.MobileElement;
 import models.components.LoginFormComponent;
 import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import test_flows.BaseFlow;
 
@@ -49,7 +50,7 @@ public class LoginFlow extends BaseFlow {
         LoginFormComponent loginFormComp = loginScreen.loginFormComponent();
 
         if(isEmailValid && isPasswordValid){
-            verifyCorrectLoginCreds();
+            verifyCorrectLoginCreds(loginScreen);
         }
 
         if(!isEmailValid){
@@ -63,8 +64,10 @@ public class LoginFlow extends BaseFlow {
         System.out.println("\n=====================");
     }
 
-    private void verifyCorrectLoginCreds() {
+    private void verifyCorrectLoginCreds(LoginScreen loginScreen) {
         // TODO: Homework
+
+        loginScreen.loginDialogComp().clickOnOKBtn();
     }
 
     private void verifyIncorrectEmailStr(LoginFormComponent loginFormComp) {

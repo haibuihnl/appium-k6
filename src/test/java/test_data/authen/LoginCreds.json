@@ -1,13 +1,14 @@
 [
   {
-    "email": "",
-    "password": ""
+    "email": "hai@",
+    "password": "12345678"
   },
   {
-    "email": "",
-    "password": ""
+    "email": "hai@sth.xyz",
+    "password": "1234567"
   },
   {
-    "email": "",
-    "password": ""
+    "email": "hai@sth.com",
+    "password": "12345678"
   }
+]
