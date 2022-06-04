@@ -5,6 +5,7 @@ import io.appium.java_client.MobileElement;
 import models.components.LoginFormComponent;
 import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.testng.asserts.SoftAssert;
 import test_flows.BaseFlow;
 
 public class LoginFlow extends BaseFlow {
@@ -24,9 +25,9 @@ public class LoginFlow extends BaseFlow {
         LoginScreen loginScreen = new LoginScreen(appiumDriver);
         LoginFormComponent loginFormComp = loginScreen.loginFormComponent();
         if(!emailStr.isEmpty()){
-            MobileElement emailElement = loginFormComp.emailElem();
-            emailElement.clear();
-            emailElement.sendKeys(emailStr);
+            MobileElement emailElem = loginFormComp.emailElem();
+            emailElem.clear();
+            emailElem.sendKeys(emailStr);
         }
 
         if(!passwordStr.isEmpty()){
@@ -63,24 +64,36 @@ public class LoginFlow extends BaseFlow {
     }
 
     private void verifyCorrectLoginCreds() {
-        System.out.println("You login correct Email and Password");
+        // TODO: Homework
     }
 
     private void verifyIncorrectEmailStr(LoginFormComponent loginFormComp) {
         String actualInvalidEmailStr = loginFormComp.getInvalidEmailStr();
-        String expectedInvalidEmailStr = "Please enter a valid email address";
+        String expectedInvalidEmailStr = "Please enter a valid email address.";
 
         // Verification
-        System.out.println("actualInvalidEmailStr: " + actualInvalidEmailStr);
-        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualInvalidEmailStr, expectedInvalidEmailStr,
+                "[ERR] Invalid email format str incorrect");
+
+        System.out.println("----------->>>>>>>> After asserting");
+        softAssert.assertTrue(false);
+
+
+        softAssert.assertAll();
     }
 
     private void verifyIncorrectPasswordStr(LoginFormComponent loginFormComp) {
         String actualInvalidPasswordStr = loginFormComp.getInvalidPasswordStr();
-        String expectedInvalidEmailStr = "Please enter at least 8 characters";
+        String expectedInvalidPasswordStr = "Please enter at least 8 characters.";
 
         // Verification
-        System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
-        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualInvalidPasswordStr, expectedInvalidPasswordStr,
+                "[ERR] Invalid email format str incorrect");
+
+        System.out.println("----------->>>>>>>> After asserting");
+        softAssert.assertTrue(false, "[ERR] true !=false");
+        softAssert.assertAll();
     }
 }

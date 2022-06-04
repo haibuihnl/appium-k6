@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression">
+    <test name="Authentication">
+        <classes>
+            <class name="test.lession_20.TestNGHook01"/>
+        </classes>
+    </test>
+    <test name="Authentication_">
+        <classes>
+            <class name="test.lession_20.TestNGHook02"/>
+        </classes>
+    </test>
+</suite>
