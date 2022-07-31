@@ -65,9 +65,11 @@ public class LoginFlow extends BaseFlow {
     }
 
     private void verifyCorrectLoginCreds(LoginScreen loginScreen) {
-        // TODO: Homework
-
+        String currentMsgTitle = loginScreen.loginDialogComp().getLoginMsgTitle();
+        System.out.println("---> currentMsgTitle: " + currentMsgTitle);
+        Assert.assertEquals(currentMsgTitle, "Success", "[ERR] Success Login title is incorrect!");
         loginScreen.loginDialogComp().clickOnOKBtn();
+
     }
 
     private void verifyIncorrectEmailStr(LoginFormComponent loginFormComp) {
@@ -78,6 +80,8 @@ public class LoginFlow extends BaseFlow {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actualInvalidEmailStr, expectedInvalidEmailStr,
                 "[ERR] Invalid email format str incorrect");
+        System.out.println(" After asserting");
+        softAssert.assertTrue(false, "[ERR] true !=false");
         softAssert.assertAll();
     }
 
@@ -88,7 +92,9 @@ public class LoginFlow extends BaseFlow {
         // Verification
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(actualInvalidPasswordStr, expectedInvalidPasswordStr,
-                "[ERR] Invalid email format str incorrect");
+                "[ERR] Invalid password format str incorrect");
+        System.out.println(" After asserting");
+        softAssert.assertTrue(false, "[ERR] true !=false");
         softAssert.assertAll();
     }
 }
