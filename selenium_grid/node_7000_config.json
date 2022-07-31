@@ -1,0 +1,25 @@
+{
+  "capabilities": [
+    {
+      "version": "10",
+      "maxInstances": 1,
+      "platform": "ANDROID",
+      "deviceName": "Samsung A7",
+      "udid": "32009220c030a589"
+    }
+  ],
+  "configuration": {
+    "cleanUpCycle": 2000,
+    "timeout": 30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url": "http://localhost:7000/wd/hub",
+    "host": "localhost",
+    "port": 7000,
+    "maxSession": 1,
+    "register": true,
+    "registerCycle": 5000,
+    "hubHost": "localhost",
+    "hubPort": 4444,
+    "hubProtocol": "http"
+  }
+}
